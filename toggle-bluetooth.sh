@@ -4,8 +4,8 @@
 
 if rfkill list bluetooth | grep -q 'yes$' ; then
   rfkill unblock bluetooth
-  notify-send -i /usr/share/icons/Papirus-Adapta/24x24/panel/blueman-active.svg "Ligando bluetooth..."
+  notify-send -i /usr/share/icons/Pop/scalable/status/bluetooth-active-symbolic.svg -h int:transient:1 "Bluetooth" "Ligando bluetooth..."
 else
   rfkill block bluetooth
-  notify-send -i /usr/share/icons/Papirus-Adapta/24x24/panel/blueman-disabled.svg "Desligando bluetooth..."
+  notify-send -i /usr/share/icons/Pop/scalable/status/bluetooth-disabled-symbolic.svg -h int:transient:1 "Bluetooth" "Desligando bluetooth..."
 fi
